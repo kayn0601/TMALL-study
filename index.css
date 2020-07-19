@@ -510,6 +510,7 @@ body{
     right: 0;
     bottom: 80px;
     margin: auto;
+    margin-bottom: 20px;
     z-index: 2;
 }
 .win-btns li{
