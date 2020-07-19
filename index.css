@@ -60,7 +60,7 @@ body{
 }
 .top-search .search{
     padding-top: 10px;
-    margin-left: 100px;
+    margin-left: 250px;
     box-shadow: 0 0 5px #c40000;
 }
 /* 顶部活动搜索结束 */
@@ -76,6 +76,7 @@ body{
     transition: all 1s ease;
     transform: scale(0,0);
     transform-origin: left bottom;
+    z-index: 999999;
 }
 .left-nav li{
     width: 100%;
@@ -90,18 +91,32 @@ body{
     text-decoration: none;
     cursor: pointer;
     margin-top: 1px;
-    background-color: #666;
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,.8);
     overflow: hidden;
     font-size: 12px;
+}
+.left-nav li[color=red]:hover{
+    background: red !important;
+}
+.left-nav li[color=blue]:hover{
+    background: blue !important;
+}
+.left-nav li[color=green]:hover{
+    background: green !important;
+}
+.left-nav li[color=purple]:hover{
+    background: purple !important;
+}
+.left-nav li[color=pink]:hover{
+    background: pink !important;
 }
 .left-nav li a{
     font: 12px "Microsoft YaHei";
     color: #ffffff !important;
 }
-.left-nav li:first-child{
+/* .left-nav li:first-child{
     background-color: red;
-}
+} */
 .left-nav li:last-child{
     border-bottom: 0;
 }
@@ -246,10 +261,10 @@ body{
 /* 头部导航结束 */
 /* 搜索栏开始 */
 .logo{
-    margin: 1px 25px;
+    margin: 0 25px 0 0;
     display: block;
     position: relative;
-    left: 100px;
+    left: -25px;
     float: left;
 }
 .logo img{
@@ -261,7 +276,7 @@ body{
     padding-top: 38px;
     float: left;
     position: relative;
-    left: 150px;
+    left: 100px;
     display: block;
 }
 #mq{
@@ -269,7 +284,7 @@ body{
     width: 491px;
     font: 16px/22px arial;
     box-sizing: border-box;
-    background: 0 0;
+    background: #fff;
     position: relative;
     vertical-align: middle;
     overflow-y: visible;
@@ -383,6 +398,28 @@ body{
 	width: 190px;
 	height: 30px;
 }
+.bannercenter{
+    width: 800px;
+    height: 480px;
+    float: left;
+    background: none;
+    position: relative;
+    left: 190px;
+}
+.bannercenter-list{
+    width: 800px;
+    height: 480px;
+    float: left;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    display: none;
+}
+.bannercenter-list img{
+    height: 480px;
+    width: auto;
+}
 .caidanb{
 	display:block;
 	padding-left:18px; 
@@ -406,11 +443,19 @@ body{
 .caidanb:hover{
 	background:#4a4a4a url(./imgs/bannerdaohangbeijing.jpg) no-repeat;
 }
+.window{
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    position: relative;
+}
 .win {
     width: 100%;
     height: 480px;
     position: relative;
-
+    margin: 0;
+    bottom: 480px;
+    cursor: pointer;
 }
 
 .win li {
@@ -429,21 +474,54 @@ body{
 }
 .win li:nth-child(1) a {
     background-image: url(./imgs/guanggao1.jpg);
+    background-repeat: no-repeat;
+    background-size:cover
 }
 .win li:nth-child(2) a {
     background-image: url(./imgs/guanggao2.jpg);
+    background-repeat: no-repeat;
+    background-size:cover
 }
 .win li:nth-child(3) a {
     background-image: url(./imgs/guanggao3.jpg);
+    background-repeat: no-repeat;
+    background-size:cover
 }
 .win li:nth-child(4) a {
     background-image: url(./imgs/guanggao4.jpg);
+    background-repeat: no-repeat;
+    background-size:cover
 }
 .win li:nth-child(5) a {
     background-image: url(./imgs/guanggao5.jpg);
+    background-repeat: no-repeat;
+    background-size:cover
 }
 .win li:nth-child(6) a {
     background-image: url(./imgs/guanggao6.jpg);
+    background-repeat: no-repeat;
+    background-size:cover
+}
+.win-btns{
+    width: 300px;
+    height: 6px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 80px;
+    margin: auto;
+    z-index: 2;
+}
+.win-btns li{
+    width: 10%;
+    height: 100%;
+    margin-left: 5%;
+    background: #fff;
+    cursor: pointer;
+    float: left;
+}
+.win-btns li:nth-child(1){
+    background: #555;
 }
 /* banner导航结束 */
 /* 品牌墙开始 */
@@ -457,10 +535,14 @@ body{
     width: 234px;
     height: 370px;
     float: left;
+    cursor: pointer;
 }
 .brandwall-item1-head{
     width: 234px;
     height: 55px;
+}
+.brandwall-item1:hover,.brandwall-item2:hover,.brandwall-item3:hover{
+    opacity: .8;
 }
 .cn{
     display: inline-block;
@@ -487,6 +569,7 @@ body{
     width: 485px;
     height: 370px;
     float: left;
+    cursor: pointer;
 }
 .brandwall-item2-head,.brandwall-item3-head{
     width: 485px;
@@ -512,6 +595,7 @@ body{
     margin: 0;
     padding: 0;
     border: 1px solid #f2f2f2;
+    cursor: pointer;
 }
 .brandlogo-item img{
     width: 100px;
@@ -520,17 +604,63 @@ body{
     top: 27px;
     left: 11px;
 }
+.brandlogo-mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,.8);
+    transition: all .3s ease-out;
+    opacity: 0;
+}
+.brandlogo-mask:hover{
+    opacity: 0.9;
+}
+.coupon{
+    color: #fff;
+    text-align: center;
+    line-height: 90px;
+    height: 60px;
+}
+.coupon span{
+    display: block;
+    padding: 0 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bolder;
+}
+.enter{
+    text-align: center;
+    height: 32px;
+}
+.enter span{
+    display: inline-block;
+    color: #fff;
+    width: 63px;
+    height: 18px;
+    font-size: 12px;
+    line-height: 15px;
+    background-color: #FF0036;
+    border-radius: 9px;
+}
 #fresh{
     height: 50px;
     width: 50px;
     top: 29px;
     left: 36px;
 }
+#fresh:hover{
+    transform: rotate(360deg);
+    transition: all linear 0.5s;
+}
 /* 品牌logo结束 */
 /* 商品开始 */
 .goods{
     margin: 20px auto 0;
-    width: 1230px;
+    width: 1240px;
 }
 /* 天猫超市开始 */
 .tmcs{
@@ -576,11 +706,76 @@ body{
     width: 235px;
     height: 618px;
 }
+.tmcs-body-listleft:hover{
+    opacity: 0.8;
+}
 .tmcs-body-listleft a img{
     display: block;
     width: 100%;
     height: 618px;
     transition: opacity .3s ease-out;
+}
+.tmcs-leftdetail{
+    position: absolute;
+    vertical-align: middle;
+    bottom: 20%;
+    width: 218px;
+    height: 64px;
+    cursor: pointer;
+}
+.tmcs-leftdetail-leftwrap{
+    background: rgba(0,0,0,.9);
+    width: 70px;
+    height: 64px;
+    overflow: hidden;
+    color: #FFF;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.left-title{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 24px;
+    font-size: 18px;
+    width: 36px;
+    overflow: hidden;
+}
+.tmcs-leftdetail-rightwrap{
+    left: 70px;
+    top: 0;
+    position: absolute;
+    background: rgba(0,0,0,.6);
+    overflow: hidden;
+    width: 128px;
+    height: 64px;
+    color: #FFF;
+    vertical-align: middle;
+}
+.right-title-absolute{
+    margin-top: 8px;
+    margin-left: 14px;
+}
+.right-title{
+    display: block;
+    line-height: 24px;
+    font-size: 18px;
+}
+.tmcs-leftdetail-wrap{
+    background-image: linear-gradient(-180deg,rgba(0,0,0,0) 4%,rgba(0,0,0,.36) 100%);
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+}
+.tmcs-leftdetail-wrap img{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
 }
 .tmcs-body-listright{
     width: 995px;
@@ -614,6 +809,7 @@ body{
     height: 57px;
     position: relative;
     float: left;
+    cursor: pointer;
 }
 .tmcs-item1in-head2{
     background: #FFF;
@@ -622,6 +818,7 @@ body{
     height: 57px;
     position: relative;
     float: left;
+    cursor: pointer;
 }
 .tabtitle{
     margin-top: 16px;
@@ -632,18 +829,35 @@ body{
     position: relative;
     left: 75px;
 }
-.tmcs-item1in-body,.tmcs-body-detail{
+.tmcs-item1in-body{
     width: 462px;
     height: 225px;
+}
+.tmcs-body-detail{
+    width: 462px;
+    height: 225px;
+    position: relative;
 }
 .tmcs-detail-a{
     width: 462px;
     height: 225px;
     display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.tmcs-detail-b{
+    width: 462px;
+    height: 225px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
 .tmcs-rightdetail{
     position: absolute;
-    top: 153px;
+    top: 100px;
     height: 87px;
     width: 291px;
     background-repeat: no-repeat;
@@ -691,9 +905,13 @@ body{
     box-shadow: 0 2px 8px 0 rgba(0,0,0,.09);
 }
 .tmcs-grid-wrap{
-    width: 234px;
+    width: 235px;
     height: 300px;
     border: 1px solid #fff;
+}
+.tmcs-grid-wrap:hover{
+    border: 1px solid red;
+    opacity: 0.8;
 }
 .tmcs-grid-tag{
     width: 68px;
@@ -835,10 +1053,23 @@ body{
     box-shadow: 0 2px 8px 0 rgba(0,0,0,.09);
 }
 .tmgj-grid-wrap{
+    width: 235px;
+    height: 300px;
+    border: 1px solid #fff;
+    position: relative;
+}
+.tmgj-grid-wrapleft{
     width: 234px;
     height: 300px;
     border: 1px solid #fff;
     position: relative;
+}
+.tmgj-grid-wrapleft:hover{
+    opacity: 0.8;
+}
+.tmgj-grid-wrap:hover{
+    opacity: 0.8;
+    border: red 1px solid;
 }
 .tmgj-grid-tag{
     width: 68px;
@@ -1025,7 +1256,7 @@ body{
     height: 200px;
 }
 .wonderful-grid{
-    width: 235px;
+    width: 230px;
     height: 301px;
     margin-left: 13px;
     text-align: center;
@@ -1033,10 +1264,14 @@ body{
     box-shadow: 0 2px 8px 0 rgba(0,0,0,.09);
 }
 .wonderful-grid-wrap{
-    width: 234px;
+    width: 230px;
     height: 300px;
     border: 1px solid #fff;
     position: relative;
+}
+.wonderful-grid-wrap:hover{
+    opacity: .8;
+    border: 1px solid red;
 }
 .wonderful-grid-tag{
     width: 68px;

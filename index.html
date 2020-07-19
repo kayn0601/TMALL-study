@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="./imgs/smalllogo.png" type="image/x-icon" />
     <title>天猫tmall.com--理想生活上天猫</title>
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
@@ -15,45 +16,46 @@
 		<div class="top-search-center">
 			<div class="top-iconfont">
 				TMALL天猫
+			</div>		
+			<div class="search">
+				<form action="" id="search">
+					<input type="text" id="mq" placeholder="搜索 天猫 商品/品牌/店铺">
+					<input type="button" value="搜索" id="icon">
+				</form>
 			</div>
-			
-				<div class="search">
-					<form action="" id="search">
-						<input type="text" id="mq" placeholder="搜索 天猫 商品/品牌/店铺">
-						<input type="button" value="搜索" id="icon">
-					</form>
-				</div>
 			
 		</div>
 	</div>
 	<!-- 顶部活动搜索结束 -->
 	<!-- 左侧活动导航开始 -->
 	<ul class="left-nav">
-        <li>
-			<a href="">导航</a>
+        <li color="red">
+			活动
 		</li>
-        <li>
-			<a href="">品牌</a>
+        <li color="blue">
+			品牌
 		</li>
-        <li>
-			<a href="">天猫超市</a>
+        <li color="green">
+			天猫超市
 		</li>
-        <li>
-			<a href="">天猫国际</a>
+        <li color="purple">
+			天猫国际
 		</li>
-        <li>
-			<a href="">猜你喜欢</a>
+        <li color="pink">
+			猜你喜欢
 		</li>
-        <li>
-			<a href="">顶部</a>
+        <li class="back-top">
+			顶部
 		</li>
     </ul>
 	<!-- 左侧活动导航结束 -->
+
+
     <!-- 头部导航开始 -->
     <nav class="nav">
         <div class="container">
             <div class="nav-left">
-                <em>喵，欢迎来天猫</em>
+                <em>仅做练习和模拟，如有侵权，立即删除</em>
                 <a href="#" class="login">请登录</a>
                 <a href="#" class="register">免费注册</a>
             </div>
@@ -105,31 +107,8 @@
         </div>
     </nav>
 	<!-- 头部导航结束 -->
-	<script>
-		// 顶部活动搜索框and左侧活动导航
-		var search=document.querySelector(".top-search")
-
-		var nav=document.querySelector(".left-nav")
-		nav.style.top=(document.documentElement.clientHeight-nav.offsetHeight)/2+"px"
-
-        window.onscroll=function(){
-            var st=document.documentElement.scrollTop
-            if(st>200){
-                search.style.top=0
-            }else{
-                search.style.top=-50+"px"
-            }
-            if(st>400){
-                nav.style.transform="scale(1,1)"
-                nav.style.opacity=1
-            }else{
-                nav.style.transform="scale(0,0)"
-                nav.style.opacity=0
-            }
-        }
-	</script>
     <!-- 搜索栏开始 -->
-    <div class="header container-fluid">
+    <div class="header container">
         <div class="logo">
             <img src="./imgs/logo.png" alt="">
         </div>
@@ -274,20 +253,99 @@
 						</li>
 					</ul>
 				</div>
-				<ul class="win">
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-				</ul>
+				<div class="bannercenter">
+					<div class="bannercenter-list">
+						<img src="./imgs/bq1.png" alt="">
+					</div>
+					<div class="bannercenter-list">
+						<img src="./imgs/bq2.png" alt="">
+					</div>
+					<div class="bannercenter-list">
+						<img src="./imgs/bq3.png" alt="">
+					</div>
+					<div class="bannercenter-list">
+						<img src="./imgs/bq4.png" alt="">
+					</div>
+					<div class="bannercenter-list">
+						<img src="./imgs/bq5.png" alt="">
+					</div>
+					<div class="bannercenter-list">
+						<img src="./imgs/bq6.png" alt="">
+					</div>
+					<div class="bannercenter-list">
+						<img src="./imgs/bq7.png" alt="">
+					</div>
+					<div class="bannercenter-list">
+						<img src="./imgs/bq8.png" alt="">
+					</div>
+					<div class="bannercenter-list">
+						<img src="./imgs/bq9.png" alt="">
+					</div>
+					<div class="bannercenter-list">
+						<img src="./imgs/bq10.png" alt="">
+					</div>
+					<div class="bannercenter-list">
+						<img src="./imgs/bq11.png" alt="">
+					</div>
+					<div class="bannercenter-list">
+						<img src="./imgs/bq12.png" alt="">
+					</div>
+					<div class="bannercenter-list">
+						<img src="./imgs/bq13.png" alt="">
+					</div>
+					<div class="bannercenter-list">
+						<img src="./imgs/bq14.png" alt="">
+					</div>
+					<div class="bannercenter-list">
+						<img src="./imgs/bq15.png" alt="">
+					</div>
+					<div class="bannercenter-list">
+						<img src="./imgs/bq16.png" alt="">
+					</div>
+				</div>
+			</div>
+
+			<script>
+				var bannerleftli = document.querySelectorAll(".caidanb")
+				var bannercenterli = document.querySelectorAll(".bannercenter-list")
+
+				for(let i=0;i<bannerleftli.length;i++){
+					bannerleftli[i].onmouseover=function(){
+						bannercenterli[i].style.display="block"
+					}
+					bannerleftli[i].onmouseout=function(){
+						bannercenterli[i].style.display="none"
+					}
+				}
+			</script>
+
+				<div class="windows">
+					<ul class="win">
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+					</ul>
+					<ul class="win-btns">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
 				<script src="animate.js"></script>
 				<script>
-			
+					// 自动轮播
+					var win = document.getElementsByClassName("win")[0]
 					var lists = document.querySelectorAll(".win li");
+					var btnss = document.querySelectorAll(".win-btns li")
+					
 					num = 0;
-					setInterval(() => {
+					function move(){
 						num++;
 						if (num > lists.length - 1) {
 							num = 0;
@@ -301,17 +359,47 @@
 						}, 300, Tween.Linear, function () {
 							lists[num].style.zIndex = 1;
 						})
-			
-					}, 3000);
-			
-				</script>
-            </div>
+
+						for(var i=0;i<btnss.length;i++){
+							btnss[i].style.background="#fff"
+						}
+						btnss[num].style.background="#555"
+					}
+					var tt=setInterval(move, 3000);
+
+					// 按钮轮播
+					for(let i=0;i<btnss.length;i++){
+						btnss[i].onclick=function(){
+							num=i
+							animate(lists[num],{
+								opacity:1
+							},300,Tween.Linear,function(){
+								lists[num].style.zIndex = 1;
+							})
+							for(var j=0;j<btnss.length;j++){
+							btnss[j].style.background="#fff"
+						}
+						btnss[num].style.background="#555"
+
+						}
+					}
+
+					// 鼠标移入暂停轮播
+					win.onmouseover=function(){
+						clearInterval(tt);
+					}
+
+					win.onmouseout=function(){
+						tt=setInterval(move,3000);
+					}
+			</script>
+            
             </div>
         </div>
     </div>
 	<!-- banner导航结束 -->
 	<!-- 品牌墙开始 -->
-	<div class="brandwall container">
+	<div class="brandwall container" name="mao">
 		<div class="brandwall-item1">
 			<div class="brandwall-item1-head">
 				<span class="cn">品牌闪购</span>
@@ -342,96 +430,329 @@
 	</div>
 	<!-- 品牌墙结束 -->
 	<!-- 品牌logo开始 -->
-	<div class="brandlogo">
+	<div class="brandlogo" name="mao">
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo1.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo2.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo3.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo4.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo5.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo6.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo7.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo8.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo9.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo10.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
-				<div class="brandlogo-item">
+		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo11.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo12.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo13.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo14.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo15.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo16.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo17.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo18.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo19.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo20.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo21.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo22.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo23.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo24.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo25.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo26.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo27.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo28.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/brandlogo29.png" alt="">
+			<a href="#" class="brandlogo-mask">
+				<div class="coupon">
+					<span>优惠券￥50</span>
+				</div>
+				<div class="enter">
+					<span>点击进入</span>
+				</div>
+			</a>
 		</div>
 		<div class="brandlogo-item">
 			<img src="./imgs/fresh.png" alt="" id="fresh">
+			
 		</div>
 		</div>
 	</div>
@@ -439,7 +760,7 @@
 	<!-- 商品开始 -->
 	<div class="goods">
 	<!-- 天猫超市开始 -->
-		<div class="tmcs">
+		<div class="tmcs" name="mao">
 			<div class="tmcs-title">
 				<img src="./imgs/TMCS.png" alt="">
 			</div>
@@ -450,6 +771,20 @@
 						<a href="#">
 							<img src="./imgs/tmcsleft.jpg" alt="">
 						</a>
+						<div class="tmcs-leftdetail">
+							<div class="tmcs-leftdetail-leftwrap">
+								<span class="left-title">天猫超市</span>
+							</div>
+							<div class="tmcs-leftdetail-rightwrap">
+								<div class="right-title-absolute">
+									<span class="right-title">1499抢</span>
+									<span class="right-title">飞天茅台</span>
+								</div>
+							</div>
+						</div>
+						<div class="tmcs-leftdetail-wrap">
+							<img src="https://img.alicdn.com/tfs/TB1IQBtXaagSKJjy0FbXXa.mVXa-68-68.png" alt="">
+						</div>
 					</div>
 					<div class="tmcs-body-listright">
 						<div class="tmcs-item1">
@@ -476,10 +811,59 @@
 											</div>
 											<img class="item-img" src="https://img.alicdn.com/tfs/TB1dfbUa1H2gK0jSZFEXXcqMpXa-400-400.jpg" alt="">
 										</a>
+										<a href="#" class="tmcs-detail-b">
+											<div class="tmcs-rightdetail">
+												<div class="tmcs-titlewrap">
+													<img src="https://img.alicdn.com/tfs/TB12RqQewMPMeJjy1XdXXasrXXa-23-23.png" alt="" class="cla-icon">
+													<span class="tab-item-title">爆款直降</span>
+												</div>
+												<div>
+													<span class="tab-desp">粮油调味</span>
+												</div>
+											</div>
+											<img class="item-img" src="https://img.alicdn.com/tfs/TB1jNScP6TpK1RjSZKPXXa3UpXa-400-400.jpg" alt="">
+										</a>
 									</div>
 								</div>
 							</div>
 						</div>
+						<script>
+							var btns = document.querySelectorAll(".tmcs-item1in-head li")
+							var cons = document.querySelectorAll(".tmcs-body-detail a")
+							
+							for (let i = 0; i < btns.length; i++) {
+								btns[i].onmouseover= function () {
+									for (var j = 0; j < cons.length; j++) {
+										btns[j].style.color = "black";
+										btns[j].style.background = "#fff"
+										cons[j].style.opacity=0
+									}
+									btns[i].style.color = "#fff"
+									btns[i].style.background = "#00B262"
+									cons[i].style.opacity=1
+								}
+							}
+
+
+							var index=0
+							setInterval(function(){
+								for (var i = 0; i < btns.length; i++) {
+									
+										btns[i].style.color = "black";
+										btns[i].style.background = "#fff"
+										cons[i].style.opacity=0
+									}
+									btns[index].style.color = "#fff"
+									btns[index].style.background = "#00B262"
+									cons[index].style.opacity=1
+									if(index == btns.length - 1) {
+										index = 0;
+									} else {
+										index++;
+									}
+									
+							},2500)
+						</script>
 						<a href="#" class="tmcs-grid">
 							<div class="tmcs-grid-wrap">
 								<div class="tmcs-grid-tag"></div>
@@ -546,7 +930,7 @@
 		</div>
 	<!-- 天猫超市结束 -->
 	<!-- 天猫国际开始 -->
-	<div class="tmgj">
+	<div class="tmgj" name="mao">
 		<div class="tmgj-title">
 			<img src="./imgs/TMGJ.png" alt="">
 		</div>
@@ -555,8 +939,22 @@
 			<div class="tmgj-body-list">
 				<div class="tmgj-body-listright">
 					<a href="#" class="tmgj-grid">
-						<div class="tmgj-grid-wrap">
+						<div class="tmgj-grid-wrapleft">
 							<img src="./imgs/tmgj1.png" alt="" class="tmgj-grid-img1">
+							<div class="tmcs-leftdetail">
+								<div class="tmcs-leftdetail-leftwrap">
+									<span class="left-title">进口精选</span>
+								</div>
+								<div class="tmcs-leftdetail-rightwrap">
+									<div class="right-title-absolute">
+										<span class="right-title">大牌好货</span>
+										<span class="right-title">轻松购入</span>
+									</div>
+								</div>
+							</div>
+							<div class="tmcs-leftdetail-wrap">
+								<img src="https://img.alicdn.com/tfs/TB1IQBtXaagSKJjy0FbXXa.mVXa-68-68.png" alt="">
+							</div>
 						</div>
 					</a>
 					<a href="#" class="tmgj-grid">
@@ -597,8 +995,22 @@
 						</div>
 					</a>
 					<a href="#" class="tmgj-grid">
-						<div class="tmgj-grid-wrap">
+						<div class="tmgj-grid-wrapleft">
 							<img src="./imgs/tmgj6.png" alt="" class="tmgj-grid-img6">
+							<div class="tmcs-leftdetail">
+								<div class="tmcs-leftdetail-leftwrap">
+									<span class="left-title">直营品质</span>
+								</div>
+								<div class="tmcs-leftdetail-rightwrap">
+									<div class="right-title-absolute">
+										<span class="right-title">放心体验</span>
+										<span class="right-title">畅享全球</span>
+									</div>
+								</div>
+							</div>
+							<div class="tmcs-leftdetail-wrap">
+								<img src="https://img.alicdn.com/tfs/TB1IQBtXaagSKJjy0FbXXa.mVXa-68-68.png" alt="">
+							</div>
 						</div>
 					</a>
 					<a href="#" class="tmgj-grid">
@@ -654,7 +1066,7 @@
 	</div>
 	<!-- 横幅结束 -->
 	<!-- 猜你喜欢开始 -->
-	<div class="wonderful">
+	<div class="wonderful" name="mao">
 		<h2 class="wonderful-title">
 			<span class="textctn">
 				<i class="iconfont icon-xin"></i>
@@ -1172,7 +1584,7 @@
 					  <h3 class="tm3">手机天猫</h3>
 					  <ul>
 						  <li>
-							<img src="./imgs/erweima.png">
+							<img src="./imgs/erweima.png" style="width: 105px;height: 105px;">
 						  </li>
 					  </ul>
 				  </li>
@@ -1247,12 +1659,12 @@
 		  <div class="a-3">
 				<ul>
 					  <li>增值电信业务经营许可证：浙B2-20110446</li>
-					  <li>网络文化经营许可证：浙网文[2020]0295-065号</li>
-					  <li>互联网医疗保健信息服务 审核同意书 浙卫网审【2014】6号</li>
+					  <li>市场名称登记证：工商网市字3301004119号</li>
+					  <li>出版物网络交易平台服务经营备案证： 新出发浙备字第001号</li>
 				</ul>
 		  </div>
 		  <div class="a-4">
-					  互联网药品信息服务资质证书编号：浙-(经营性)-2012-0005
+			互联网违法和不良信息举报电话：0571-81683755 blxxjb@alibaba-inc.com
 		  </div>
 		  <div class="a-5">
 				&copy; 2003-2020 TMALL.com 版权所有
@@ -1264,5 +1676,74 @@
 	</div>
 </div>
 <!-- 关于我们str结束 -->
+<script src="animate.js"></script>
+<script>
+	// 左侧活动跳转导航and顶部活动搜索框    
+
+
+	var search=document.querySelector(".top-search")
+	var nav=document.querySelector(".left-nav")
+	nav.style.top=(document.documentElement.clientHeight-nav.offsetHeight)/2+"px"
+
+	// 滚动事件
+	window.onscroll=function(){
+		// 搜索框
+		var st=document.documentElement.scrollTop
+		if(st>200){
+			search.style.top=0
+		}else{
+			search.style.top="-50px"
+		}
+		if(st>400){
+			nav.style.transform="scale(1,1)"
+			nav.style.opacity=1
+		}else{
+			nav.style.transform="scale(0,0)"
+			nav.style.opacity=0
+		}
+
+		for(var i=0;i<navList.length;i++){
+
+			if(navList[i].top<st&&navList[i].top+navList[i].height>st){
+				for(var j=0;j<navList.length;j++){
+					navList[j].style.background="rgba(0,0,0,.8)"
+					navList[i].style.flag=false
+				}
+				navList[i].style.background=navList[i].getAttribute("color")
+			}
+		}
+	}
+		
+	
+
+	// 侧边栏点击转到操作
+
+	// 点击的时候滚动条要去的位置
+	var navList=document.querySelectorAll(".left-nav li:not(.back-top)")
+	var navLast=document.querySelectorAll(".back-top")[0]
+
+	var conList=document.getElementsByName("mao")
+
+
+	navLast.onclick=function(){
+		animate(document.documentElement,{
+				scrollTop:0
+			},500)
+	}
+
+	for(var i=0;i<navList.length;i++){
+		// 首先获取每一个楼层所在的位置
+		navList[i].top=conList[i].offsetTop
+		navList[i].height=conList[i].offsetHeight
+
+		navList[i].onclick=function(){
+			animate(document.documentElement,{
+				scrollTop:this.top
+			},500)
+		}
+
+	}
+	
+</script>
 </body>
 </html>
