@@ -1,89 +1,81 @@
 /*
     动画函数
-
-    obj  动画的对象
-    attrobj  动画的属性和最终值  object{}
-    duration  动画的持续时间
-    fn  动画函数  默认值 Tween.Linear
-    callback  回调函数，本次动画执行完后运行的函数
+    obj  要动画的对象
+    attrObj  都规划的属性和最终值 object {}
+    duration 动画持续的时间
+    fn 动画函数  m默认值 Tween.Linear
+    callback  回调函数，本次动画执行完之后运行的函数
 */
 
-function animate(obj, attrObj, duration, fn, callback) {
-    // 参数初始化
-    if (obj.nodeType !== 1) {
-        console.error("类型不对");
-        return;
+//动态结点操作
 
-    }
+
+function animate(obj, attrObj, duration, fn,callback) {
+    clearInterval(obj.t);
+    // 参数初始化
+    // if (obj.nodeType == 1) {
+    //     console.error("对象的类型不对");
+    //     return;
+    // }
     var start = {};
-    var change = {};
+    var change = [];
     var time = 0;
     var fn = fn || Tween.Linear;
 
-    // 
+    // 获取属性的初始值
     for (var i in attrObj) {
-        start[i] = css(obj,i)
-        change[i] = attrObj[i] - start[i]
+        start[i] =css(obj,i);
+        change[i] = attrObj[i] - start[i];
     }
-
     obj.t = setInterval(function () {
         time += 50;
         for (var i in attrObj) {
-            // obj.style[i] = fn(time, start[i], change[i], duration) +
-            //     "px"
-            css(obj, i, fn(time, start[i], change[i], duration))
-
-
+            // obj.style[i] = fn(time, start[i], change[i],duration)+"px";
+            css(obj,i,fn(time, start[i], change[i],duration));
         }
-        if (time >= duration) {
-            for (var i in attrObj) {
-                css(obj,i,attrObj[i])
+        if(time>=duration){
+            for(var i in attrObj){
+                // obj.style[i]=attrObj[i]+"px";
+                css(obj,i,attrObj[i]);
             }
             clearInterval(obj.t);
-            if (callback) {
-                callback();
-            }
+            if(callback){
+                callback()
+            };
         }
+
     }, 50)
-
-
 }
 
 
-// css(div,"width",200)
-function css(obj, attr, val) {
-    if (arguments.length == 2) {
-        switch (attr) {
+function css(obj,attr,val){
+    if(arguments.length==2){
+        switch(attr){
             case "background":
             case "color":
             case "border":
-                return getComputedStyle(obj, null)[attr];
-                break;
-            case "scrollTOP":
+                return getComputedStyle(obj,null)[attr];
+            break;
+            case "scrollTop":
                 return obj[attr];
-                break;
+            break;
             default:
-                return parseInt(getComputedStyle(obj, null)[attr]);
-
+                return parseInt(getComputedStyle(obj,null)[attr]);
         }
-
-    } else if (arguments.length == 3) {
-        switch (attr) {
+        
+    }else if(arguments.length==3){
+        switch(attr){
             case "background":
             case "color":
             case "opacity":
-            case "border":
                 obj.style[attr]=val;
-                break;
+            break;
             case "scrollTop":
                 obj[attr]=val;
-                break;
-                default:
-                    obj.style[attr]=val+"px"
-
+            break;
+            default:
+                obj.style[attr]=val+"px";
         }
-
-
     }
 }
 
