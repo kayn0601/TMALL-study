@@ -1707,14 +1707,12 @@
 			if(navList[i].top<st&&navList[i].top+navList[i].height>st){
 				for(var j=0;j<navList.length;j++){
 					navList[j].style.background="rgba(0,0,0,.8)"
-					navList[i].style.flag=false
 				}
 				navList[i].style.background=navList[i].getAttribute("color")
 			}
 		}
 
 		// 按需加载图片
-		navList.flag=false
 		for(var i=0;i<navList.length;i++){
                 if(navList[i].top-document.documentElement.clientHeight-100<st){
                     if(!navList[i].flag){
@@ -1723,7 +1721,7 @@
                         for(var j=0;j<imgs.length;j++){
                             imgs[j].src=imgs[j].getAttribute("attr")
                         }
-                        navList.flag[i]=true
+                        navList[i].flag=true
                     }
                 }
             }
