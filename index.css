@@ -475,32 +475,38 @@ body{
 .win li:nth-child(1) a {
     background-image: url(./imgs/guanggao1.jpg);
     background-repeat: no-repeat;
-    background-size:cover
+    background-size:cover;
+    background-position: center;
 }
 .win li:nth-child(2) a {
     background-image: url(./imgs/guanggao2.jpg);
     background-repeat: no-repeat;
-    background-size:cover
+    background-size:cover;
+    background-position: center;
 }
 .win li:nth-child(3) a {
     background-image: url(./imgs/guanggao3.jpg);
     background-repeat: no-repeat;
-    background-size:cover
+    background-size:cover;
+    background-position: center;
 }
 .win li:nth-child(4) a {
     background-image: url(./imgs/guanggao4.jpg);
     background-repeat: no-repeat;
-    background-size:cover
+    background-size:cover;
+    background-position: center;
 }
 .win li:nth-child(5) a {
     background-image: url(./imgs/guanggao5.jpg);
     background-repeat: no-repeat;
-    background-size:cover
+    background-size:cover;
+    background-position: center;
 }
 .win li:nth-child(6) a {
     background-image: url(./imgs/guanggao6.jpg);
     background-repeat: no-repeat;
-    background-size:cover
+    background-size:cover;
+    background-position: center;
 }
 .win-btns{
     width: 300px;
@@ -1381,9 +1387,6 @@ body{
 .a-3{
 	width: 1190px;
 	height: 15px;
-	
-}
-.a-3 ul{
 	
 }
 .a-3 ul li{
